@@ -4,6 +4,12 @@ from django.shortcuts import render
 def index(request):
     data = [
         {
+            'nombre': 'a',
+            'precio': 'b',
+            'categoria': 'c',
+            'imagen': '',
+        },
+        {
             'nombre': '',
             'precio': '',
             'categoria': '',
@@ -15,28 +21,24 @@ def index(request):
             'categoria': '',
             'imagen': '',
         },
-                {
+        {
             'nombre': '',
             'precio': '',
             'categoria': '',
             'imagen': '',
         },
-                        {
+        {
             'nombre': '',
             'precio': '',
             'categoria': '',
             'imagen': '',
         },
-                                {
-            'nombre': '',
-            'precio': '',
-            'categoria': '',
-            'imagen': '',
-        },
-                                        {
+        {
             'nombre': '',
             'precio': '',
             'categoria': '',
             'imagen': '',
         },
     ]
+    contexto = {'data': data}
+    return render(request, 'tarjetas/index.html', contexto)
